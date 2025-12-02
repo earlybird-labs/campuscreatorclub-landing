@@ -1,10 +1,12 @@
-"use client"
+"use client";
 
-import Image from "next/image"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Star } from "lucide-react"
-import { useEffect, useState } from "react"
+import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Star } from "lucide-react";
+import { useEffect, useState } from "react";
+
+// Test
 
 const testimonials = [
   {
@@ -32,7 +34,8 @@ const testimonials = [
     name: "MaryKate Richmond",
     university: "Miami University",
     image: "/marykate-richmond.jpeg",
-    review: "Great opportunities and they have come in quick! You guys are so helpful and kind. I love it :)",
+    review:
+      "Great opportunities and they have come in quick! You guys are so helpful and kind. I love it :)",
   },
   {
     name: "Katherine Leyden",
@@ -76,57 +79,60 @@ const testimonials = [
     review:
       "CCC has been a great resource for me to connect with other creators and be able to work with brands to promote content! I have been able to gain followers and connect with other people to learn how to grow my account to make my social image better! I would recommend CCC to anyone who is interested in becoming a (micro)influencer and wants to take the first steps into learning how to do so!",
   },
-]
+];
 
 export default function Home() {
-  const [currentIndex, setCurrentIndex] = useState(0)
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length)
-    }, 5000) // Change testimonial every 5 seconds
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
+    }, 5000); // Change testimonial every 5 seconds
 
-    return () => clearInterval(interval)
-  }, [])
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div className="min-h-screen bg-white">
       <style jsx>{`
         @keyframes float {
-          0%, 100% {
+          0%,
+          100% {
             transform: translateY(0px);
           }
           50% {
             transform: translateY(-15px);
           }
         }
-        
+
         @keyframes float-delayed {
-          0%, 100% {
+          0%,
+          100% {
             transform: translateY(0px);
           }
           50% {
             transform: translateY(-20px);
           }
         }
-        
+
         @keyframes float-opposite {
-          0%, 100% {
+          0%,
+          100% {
             transform: translateY(-10px);
           }
           50% {
             transform: translateY(5px);
           }
         }
-        
+
         .float-animation {
           animation: float 3s ease-in-out infinite;
         }
-        
+
         .float-animation-delayed {
           animation: float-delayed 4s ease-in-out infinite 0.5s;
         }
-        
+
         .float-animation-opposite {
           animation: float-opposite 3.5s ease-in-out infinite 1s;
         }
@@ -135,14 +141,22 @@ export default function Home() {
       {/* Navigation - Adjusted padding for mobile */}
       <header className="container mx-auto px-4 py-4 sm:py-6 flex justify-between items-center">
         <div className="flex items-center">
-          <Image src="/logo.png" alt="Campus Creator Club" width={60} height={60} className="rounded-lg" />
+          <Image
+            src="/logo.png"
+            alt="Campus Creator Club"
+            width={60}
+            height={60}
+            className="rounded-lg"
+          />
         </div>
-        <Link 
+        <Link
           href="https://apps.apple.com/us/app/campus-creator-club/id6746701396"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Button className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 font-semibold">DOWNLOAD</Button>
+          <Button className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 font-semibold">
+            DOWNLOAD
+          </Button>
         </Link>
       </header>
 
@@ -156,27 +170,27 @@ export default function Home() {
         </h1>
 
         <p className="text-center text-gray-600 max-w-2xl text-lg sm:text-xl leading-relaxed mb-12 font-medium">
-          Connect with college creators nationwide, access exclusive brand deals, and level up your content through
-          webinars with top creators.
+          Connect with college creators nationwide, access exclusive brand
+          deals, and level up your content through webinars with top creators.
         </p>
 
         {/* App Store Buttons - Using same style as QuitBet */}
-       <div className="flex flex-row gap-4 sm:gap-6 mb-16 sm:mb-20 justify-center">
-  <Link 
-    href="https://apps.apple.com/us/app/campus-creator-club/id6746701396"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="store-link"
-  >
-    <Image
-      src="/app.svg.png"
-      alt="Download on the App Store"
-      width={200}
-      height={60}
-      className="store-button fade-in transition-transform hover:scale-105"
-    />
-  </Link>
-</div>
+        <div className="flex flex-row gap-4 sm:gap-6 mb-16 sm:mb-20 justify-center">
+          <Link
+            href="https://apps.apple.com/us/app/campus-creator-club/id6746701396"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="store-link"
+          >
+            <Image
+              src="/app.svg.png"
+              alt="Download on the App Store"
+              width={200}
+              height={60}
+              className="store-button fade-in transition-transform hover:scale-105"
+            />
+          </Link>
+        </div>
 
         {/* App Screenshots - Static (No Float Animation) */}
         <div className="w-full max-w-2xl px-4 mb-12 relative overflow-hidden h-96">
@@ -273,7 +287,8 @@ export default function Home() {
                 Say
               </h2>
               <p className="text-gray-600 text-xl max-w-3xl mx-auto leading-relaxed animate-fade-in-up animation-delay-400">
-                Real stories from college creators who transformed their social media presence and started earning through our platform.
+                Real stories from college creators who transformed their social
+                media presence and started earning through our platform.
               </p>
             </div>
 
@@ -307,8 +322,8 @@ export default function Home() {
                         {/* Static Stars */}
                         <div className="flex justify-center md:justify-start gap-1 mb-6">
                           {[...Array(5)].map((_, i) => (
-                            <Star 
-                              key={i} 
+                            <Star
+                              key={i}
                               className="w-6 h-6 fill-yellow-400 text-yellow-400"
                             />
                           ))}
@@ -316,16 +331,24 @@ export default function Home() {
 
                         {/* Quote */}
                         <blockquote className="text-gray-700 text-xl md:text-2xl leading-relaxed mb-8 italic font-medium relative">
-                          <span className="text-6xl text-blue-200 absolute -top-4 -left-4 font-serif">"</span>
+                          <span className="text-6xl text-blue-200 absolute -top-4 -left-4 font-serif">
+                            "
+                          </span>
                           {testimonials[0].review}
-                          <span className="text-6xl text-blue-200 absolute -bottom-8 -right-4 font-serif">"</span>
+                          <span className="text-6xl text-blue-200 absolute -bottom-8 -right-4 font-serif">
+                            "
+                          </span>
                         </blockquote>
 
                         {/* Enhanced Author Info */}
                         <div className="relative">
                           <div className="bg-gradient-to-r from-gray-50 to-blue-50 rounded-2xl p-6 border border-gray-100">
-                            <h3 className="font-bold text-2xl text-gray-900 mb-2">{testimonials[0].name}</h3>
-                            <p className="text-blue-600 font-semibold text-lg">{testimonials[0].university}</p>
+                            <h3 className="font-bold text-2xl text-gray-900 mb-2">
+                              {testimonials[0].name}
+                            </h3>
+                            <p className="text-blue-600 font-semibold text-lg">
+                              {testimonials[0].university}
+                            </p>
                             <div className="mt-3 flex items-center justify-center md:justify-start gap-2 text-sm text-gray-500">
                               <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
                               Active Creator
@@ -342,7 +365,7 @@ export default function Home() {
             {/* Testimonial Grid - Interactive Cards Only */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
               {testimonials.slice(1, 7).map((testimonial, index) => (
-                <div 
+                <div
                   key={index}
                   className="group transform transition-all duration-500 hover:scale-105 animate-fade-in-up"
                   style={{ animationDelay: `${800 + index * 100}ms` }}
@@ -360,15 +383,22 @@ export default function Home() {
                         />
                       </div>
                       <div>
-                        <h4 className="font-semibold text-gray-900 text-sm">{testimonial.name}</h4>
-                        <p className="text-blue-600 text-xs font-medium">{testimonial.university}</p>
+                        <h4 className="font-semibold text-gray-900 text-sm">
+                          {testimonial.name}
+                        </h4>
+                        <p className="text-blue-600 text-xs font-medium">
+                          {testimonial.university}
+                        </p>
                       </div>
                     </div>
 
                     {/* Stars */}
                     <div className="flex gap-1 mb-3">
                       {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                        <Star
+                          key={i}
+                          className="w-4 h-4 fill-yellow-400 text-yellow-400"
+                        />
                       ))}
                     </div>
 
@@ -388,13 +418,17 @@ export default function Home() {
                 <div className="absolute inset-0 opacity-10">
                   <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white to-transparent transform rotate-45"></div>
                 </div>
-                
+
                 <div className="relative z-10">
-                  <h3 className="text-2xl md:text-3xl font-bold mb-4">Ready to Join 2,000+ Successful Creators?</h3>
+                  <h3 className="text-2xl md:text-3xl font-bold mb-4">
+                    Ready to Join 2,000+ Successful Creators?
+                  </h3>
                   <p className="text-blue-100 mb-8 text-lg max-w-2xl mx-auto">
-                    Start your creator journey today and unlock exclusive brand partnerships, educational content, and a supportive community.
+                    Start your creator journey today and unlock exclusive brand
+                    partnerships, educational content, and a supportive
+                    community.
                   </p>
-                  <Link 
+                  <Link
                     href="https://apps.apple.com/us/app/campus-creator-club/id6746701396"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -411,5 +445,5 @@ export default function Home() {
         </section>
       </main>
     </div>
-  )
+  );
 }
