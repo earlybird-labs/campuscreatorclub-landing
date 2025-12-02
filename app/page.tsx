@@ -6,8 +6,6 @@ import { Button } from "@/components/ui/button";
 import { Star } from "lucide-react";
 import { useEffect, useState } from "react";
 
-// Test
-
 const testimonials = [
   {
     name: "Harley Johnson",
