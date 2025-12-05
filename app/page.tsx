@@ -197,7 +197,7 @@ export default function Home() {
             <div className="flex justify-center items-center -space-x-12">
               <div className="transform -rotate-6 transition-transform hover:rotate-0 hover:scale-105 z-10">
                 <Image
-                  src="/dashboard-screen.PNG"
+                  src="/dashboard-screen.png"
                   alt="Dashboard Screen"
                   width={150}
                   height={300}
@@ -207,7 +207,7 @@ export default function Home() {
               </div>
               <div className="transform scale-125 transition-transform hover:scale-130 z-20">
                 <Image
-                  src="/community-screen.PNG"
+                  src="/community-screen.png"
                   alt="Community Screen"
                   width={180}
                   height={360}
@@ -217,7 +217,7 @@ export default function Home() {
               </div>
               <div className="transform rotate-6 transition-transform hover:rotate-0 hover:scale-105 z-10">
                 <Image
-                  src="/campaigns-screen.PNG"
+                  src="/campaigns-screen.png"
                   alt="Campaigns Screen"
                   width={150}
                   height={300}
@@ -233,7 +233,7 @@ export default function Home() {
             <div className="flex justify-center items-center -space-x-8">
               <div className="transform -rotate-6 scale-75 z-10">
                 <Image
-                  src="/dashboard-screen.PNG"
+                  src="/dashboard-screen.png"
                   alt="Dashboard Screen"
                   width={120}
                   height={240}
@@ -243,7 +243,7 @@ export default function Home() {
               </div>
               <div className="transform scale-100 z-20">
                 <Image
-                  src="/community-screen.PNG"
+                  src="/community-screen.png"
                   alt="Community Screen"
                   width={140}
                   height={280}
@@ -253,7 +253,7 @@ export default function Home() {
               </div>
               <div className="transform rotate-6 scale-75 z-10">
                 <Image
-                  src="/campaigns-screen.PNG"
+                  src="/campaigns-screen.png"
                   alt="Campaigns Screen"
                   width={120}
                   height={240}
